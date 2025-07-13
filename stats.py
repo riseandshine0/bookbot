@@ -6,12 +6,11 @@ def count_words(text):
 
 def count_chars(text):
     counted_chars = {}
-    for word in text.split():
-        for char in word:
-            if char.lower() not in counted_chars:
-                counted_chars[char.lower()] = 1
-            else:
-                counted_chars[char.lower()] += 1 
+    for char in text:
+        if char.lower() not in counted_chars:
+            counted_chars[char.lower()] = 1
+        else:
+            counted_chars[char.lower()] += 1 
     return counted_chars # returns {'char': int}
 
 def sort_on(items):
